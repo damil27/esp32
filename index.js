@@ -2,8 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mysql = require("mysql");
 const cors = require("cors");
+const dotenv = require("dotenv");
 
 const app = express();
+dotenv.config();
+
 const port = process.env.PORT;
 
 app.use(bodyParser.urlencoded({ extended: false }));
